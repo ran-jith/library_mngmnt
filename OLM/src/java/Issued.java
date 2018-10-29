@@ -20,7 +20,7 @@ public class Issued extends HttpServlet {
         String dbName = "olm";
         String driver = "com.mysql.jdbc.Driver";
         String userName = "root";
-        String password = "password123";
+        String password = "root";
         Statement st;
         try {
             Class.forName(driver).newInstance();
