@@ -15,17 +15,17 @@ public class AddBook extends HttpServlet {
             throws ServletException, IOException {
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
-        Connection conn = null;
+        
         String url = "jdbc:mysql://localhost:3306/";
         String dbName = "olm";
         String driver = "com.mysql.jdbc.Driver";
         String userName = "root";
-        String password = "password123";
+        String password = "root";
  
         Statement st;
         try {
             Class.forName(driver).newInstance();
-            conn = DriverManager.getConnection(url + dbName, userName, password);
+           Connection conn = DriverManager.getConnection(url + dbName, userName, password);
             System.out.println("Connected!");
             String jname = req.getParameter("bname");
             String jauthor = req.getParameter("bauthor");
